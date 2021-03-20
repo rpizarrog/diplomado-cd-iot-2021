@@ -1,0 +1,37 @@
+# Introducción {#intro}
+
+## ¿Qué es ciencia de los datos?
+
+Los datos y la información en las empresas son un activo necesario para la acertada toma de decisiones. Hoy en día y la gran cantidad de datos, la diversidad de formatos y la velocidad que se crean, requiere del uso de herramientas y tecnología para su rápido almacenamiento, procesamiento, análisis e interpretación veraz y oportuna, con ello obtener valor y conocimiento con la finalidad de realizar acciones que busquen la eficiencia y productividad en las organizaciones.
+
+La información proviene de todos lados, sensores que reciben señales y se convierten en datos, publicaciones en las redes sociales, imágenes y vídeos digitales, registros de compra y transacciones, señales de GPS de los móviles, datos de las aplicaciones WEB, además de los tradicionales medios de comunicación como radio, televisión, prensa entre otros.
+
+La ciencia de los datos como eje central, es un campo multidisciplinario que involucra los procesos y sistemas para extraer el conocimiento o un mejor entendimiento de grandes volúmenes de datos y sus diferentes formas estructurados y no estructurados. Pretende aprovechar aspectos tales como base de datos, tecnología *big data*, aprendizaje automático (*machine learning*) e, internet de las cosas (*internet of things* (IoT)).
+
+A pesar de que el término big data se asocia principalmente con cantidades de datos exorbitantes, se debe dejar de lado esta percepción, big data no va dirigido solo a gran tamaño, sino que abarca tanto volumen como variedad de datos y velocidad de acceso y procesamiento; además la Tecnología de Información y Comunicaciones (TIC) propicia que una gran cantidad se datos, estos deben  procesarse, entenderse y transformarse en decisiones de valor, esto es el reto del big data.
+
+## Machine learning
+
+El concepto de machine learning en la ciencia de los datos, es una área de la Inteligencia Artificial que engloba un conjunto de tareas, técnicas y algoritmos que hacen posible el aprendizaje de las computadoras sin intervención del humano a través del entrenamiento con grandes volúmenes de datos.
+
+## Internet de las cosas
+
+Por otra parte, en un futuro cercano cualquier objeto cotidiano estará dotado de algún tipo de sensor que enviará información. El internet de las cosas (IoT) en la Ciencia de los Datos, está generando volúmenes masivos de datos estructurados y no estructurados.
+
+## Científico de datos
+
+Las personas con las competencias adquiridas en el uso de éstas y otras herramientas y tecnologías, se dotan con ciertas características que dan lugar al surgimiento de un nuevo perfil profesional, el científico de datos (Data Scientist), que serían las personas capacitadas que deben saber de procesos, de tecnologías, del análisis e interpretación estadística, de comunicación de negocios, entre otros atributos.
+
+El perfil del científico de datos es un ejemplo de la evolución de las profesiones que hacen uso de la información con el uso de la tecnología de información y comunicaciones (TIC), un híbrido entre un programador, analista, comunicador y consejero. Se trata de un profesional dedicado a analizar e interpretar grandes bases de datos.
+
+## Lenguaje de programación R
+
+Es un lenguaje de programación para efectuar análisis de datos estadísticos y visualizar gráficas de los mismos datos. Además, es un software libre, gratuito, accesible y siempre a la vanguardia.
+
+Descargar lenguaje de programamción R. [R Project](https://www.r-project.org/ "R Project")
+
+## R Studio
+
+RStudio es un entorno de desarrollo integrado (IDE) para R. Incluye una consola, editor de resaltado de sintaxis que admite la ejecución directa de código, así como herramientas para el trazado, el historial, la depuración y la gestión del espacio de trabajo.
+
+Descargar [R Studio](https://rstudio.com/products/rstudio/ "R Studio")

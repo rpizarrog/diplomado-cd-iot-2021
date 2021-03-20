@@ -1,0 +1,79 @@
+---
+title: "Introducción a la Ciencia de los Datos"
+author: "Rubén Pizarro Gurrola"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [references.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Pendiente"
+---
+
+------------------------------------------------------------------------
+
+# Presentación
+
+![](images/instructores.jpg "instructores")
+
+## Instructores
+
+    MTI. José Gabriel Rodrígue Rivas, LI.
+
+    MTI. Marco Antonio Rodrígue Zúñiga, ISC.
+
+<div>
+
+MAI. Rubén Pizarro Gurrola, LI.
+
+Docente e investigador de tiempo completo del Instituto Tecnológico de Durango.
+
+-   Master en Business Intelligent y Data Science 2019-2020. Actualmente cursando en Innovation & Entrepreneurship Business School S.L. IEBS.
+
+-   Master en Ciencia de los Datos 2017. Big Data 4Success S.L.U; SoyData.Net
+
+-   Actualmente estudios en Doctorado en Informática Universidad Americana de Europa UNADE.
+
+-   Maestría en Administración de sistemas de Información en el Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) campus Monterrey en 1995.
+
+-   Licenciado en informática egresado del Instituto Tecnológico de Durango en 1991
+
+-   Coordinador del libro "Ciencia de los Datos. Propuestas y casos de uso"" con registro ISBN con número 978-607-8730-10-0.
+
+-   Reconocimiento de perfil deseable registro;
+
+-   Responsable del Cuerpo Académico en Formación de Desarrollo de Tecnología de Información basada en Ciencia de los Datos	ITDUR-CA-14.
+
+-   Líder de línea de investigación en "Ciencia de los Datos"; miembro de la Red Colaborativa de Tecnologías de la información en Durango de COCYTED;
+
+-   Miembro activo de la Red Iberoamericana de Academias de Investigación A.C. REDIBAI;
+
+-   Miembro de la Red de Investigadores educativos REDIE en Durango, 2019.
+
+</div>
+
+## Propósito
+
+Este libro digital que se presenta y describe a continuación, es el resultado y consecuencia de la impartición del diplomado denominado "**Ciencia de los datos e internet de las cosas**" ofrecido por el [Instituto Tecnológico de Durango](https://www.itdurango.edu.mx/ "Instituto Tecnológico de Durango") perteneciente al [Tecnológico Nacional de México](https://www.tecnm.mx/ "Tecnológico Nacional de México").
+
+El objetivo de el diplomado fué el desarrollar habilidades en los participante en torno al paradigma industrias 4.0 relacionadas con ciencia de los datos e internet de las cosas IoT con el uso de herramientas adecuadas.
+
+El diplomado constó de seis módulos:
+
+1.  Modulo I. Introducción a la Ciencia de los datos
+
+2.  Modulo II. Bases de datos NoSQL
+
+3.  Modulo III. Fundamentos de programación en Python
+
+4.  Modulo IV. Internet de las cosas
+
+5.  Modulo V. Machine Learning en R
+
+6.  Modulo VI. Big data & Analytics con Python
+
+Este libro digital es el resultado del "**Módulo I** "**Introducción a la ciencia de los datos**", describe prácticas, ejercicios y desafíos realizados.
+
+Se busca con este libro digital que el participante y lector, desarrollen habilidades de programación en lenguaje R, a través de R Studio para el análisis de datos estructurados y semiestructurados y su correcta interpretación y adecuada comunicación.
+
+De manera específica se pretende lograr lo siguiente: instalar, configurar y organizar el entorno de trabajo con R y R Studio, realizar programas en R, utilizar técnicas descriptivas para analizar datos estructurados, analizar y evaluar datos semiestructurados, construir documentos markdown, publicar documentos en la nube por medio del servicio RPubs de R Studio y realizar aplicaciones WEB interactivas a través del servicio R Shiny, entre otros.
