@@ -1,0 +1,73 @@
+---
+title: "Descripción de datos cuantitativos"
+author: "Rubén Pizarro"
+date: "20/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+---
+
+# Describir datos cuantitativos
+
+El ejercicio consiste en determinar alos estadísticoa básicos de tipo descriptivos
+
+Los estadísticos son la media, el mínimo, el máximo, los cuartiles, el rango, la varianza, la desviación, entre otros.
+
+## Cargar librería
+
+```{r}
+library(readr)
+```
+
+## Cargar los datos
+
+```{r}
+datos.personas <- read.csv("https://raw.githubusercontent.com/rpizarrog/FundamentosMachineLearning/master/datos/personas.2.csv", encoding = "iso-8859-1", stringsAsFactors = TRUE)
+datos.personas
+
+```
+
+### summary()
+
+La función summary() visualiza los estadísticos básicos y describe de manera general los datos
+
+```{r}
+summary(datos.personas)
+
+```
+
+### La media *mean()*
+
+```{r}
+media.edad <- mean(datos.personas$edades)
+media.estatura <- mean(datos.personas$estaturas)
+media.peso <- mean(datos.personas$pesos)
+
+media.edad
+media.estatura
+media.peso
+
+```
+
+### Los máximos y mínimos *max(), min(), range()*
+
+```{r}
+max(datos.personas$edades)
+min(datos.personas$edades)
+range(datos.personas$edades)
+```
+
+### Varianza y desviación standard *sd()*
+
+```{r}
+varianza.edad <- var(datos.personas$edades)
+desviacion.edad <- sd(datos.personas$edades)
+
+varianza.edad
+desviacion.edad
+
+```

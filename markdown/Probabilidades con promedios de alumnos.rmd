@@ -1,0 +1,87 @@
+---
+title: "Probabilidades con promedios de alumnos"
+author: "Rubén Pizarro"
+date: "26/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+---
+
+Este documento carga un conjunto de datos preudoreales de alumnos para conocer realizar análisis descriptivo de las variables promedio y carrera
+
+# Cargar librerías
+
+```{r message=FALSE, warning=FALSE}
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+```
+
+# Cargar datos
+
+```{r}
+datos <- read.csv("https://raw.githubusercontent.com/rpizarrog/diplomado-cd-iot-2021/main/datos/datos.alumnosEJ2021.csv", stringsAsFactors = TRUE)
+
+datos <- select(datos, Alumno, Carrera, Promedio)
+
+
+```
+
+# Describir datos
+
+```{r}
+
+str(datos)
+summary(datos)
+
+```
+
+## Simular probabilidades
+
+¿Cuál es la probabilidad de elegir a un alumno y que sea de la carrera de CIVIL?
+
+Total de datos y frecuencias por carrera
+
+```{r}
+n <- nrow(datos)
+frecuencia <- table(datos$Carrera)
+frecuencia <- data.frame(frecuencia)
+frecuencia
+```
+
+Probabilidades por carrera
+
+```{r}
+
+prob <- frecuencia$Freq / n
+prob
+
+frecuencia <- mutate(frecuencia, probs = prob)
+
+frecuencia
+
+```
+
+## Gráficos con ggplot()
+
+```{r}
+grafica <- ggplot(data = datos, mapping = aes(x = Alumno, y = Promedio, color = Carrera)) +
+         geom_point() +
+         facet_wrap(~ Carrera, nrow = 5) 
+
+grafica
+
+```
+
+## Gráfica de barra por Carrera
+
+```{r message=FALSE, warning=FALSE}
+ggplot(data = frecuencia, mapping = aes(x = substr(Var1, 1,5), y = Freq)) +
+  geom_bar(stat="identity")
+
+```

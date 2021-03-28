@@ -1,0 +1,60 @@
+---
+title: "Desafío 3"
+author: "Rubén Pizarro"
+date: "16/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+---
+
+# Importar datos
+
+## Cargar librería
+
+Se carga la librería readr() que permit importar datos
+
+```{r message=FALSE, warning=FALSE}
+library(readr)
+```
+
+## Cargar datos tipo csv
+
+Se utiliza la función read.csv() para cargar os daos y almacenarlo en una variable llamada datos
+
+Se puede importar datos del disco local de la computadora
+
+```{r}
+datos <- read.csv(file = "../datos/personas.2.csv", header = TRUE, 
+         sep = ",")
+datos
+```
+
+También se puede importar datos de una dirección URL de internet, por ejemplo importar datos de afectaciones por covid hasta el mes de Febrero del 2020.
+
+```{r}
+URL <- "https://raw.githubusercontent.com/rpizarrog/FundamentosMachineLearning/master/datos/covid_19_data.csv"
+datos.covid <- read.csv(URL)
+
+```
+
+### head()
+
+Muestra los primeros registros u bservaciones de un data frame
+
+```{r}
+head(datos.covid, 15)
+
+```
+
+### tail()
+
+Muestra los últimos registros
+
+```{r}
+tail(datos.covid, 15)
+
+```

@@ -1,0 +1,192 @@
+---
+title: "Desafío 3"
+author: "Rubén Pizarro"
+date: "16/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+---
+
+# Estructuras de datos en R
+
+## Vectores y data.frames
+
+### Desafío 3
+
+Construir un data.frame a partir de un conjunto de vectores y analizar descriptivamente el conjunto de datos.
+
+Crear un vector caracter de 10 nombres diferentes
+
+```{r}
+nombres <- c("Juan", "Pedro", "Luis", "Aracely", "Rubén", "Linda", "Brenda", "Lucy", "Liliana", "Aracely")
+
+```
+
+Crear un vector numérico de 10 edades diferentes o repetidos
+
+```{r}
+edades <- c(24, 34, 51, 32, 45, 30, 43, 54, 54, 23)
+
+```
+
+Crear un vector de caracter 10 géneros entre M o F Masculino o Femenino
+
+```{r}
+generos <- c('M', "M", "M", "F", "M", "F", "F", "F", "F", "F")
+```
+
+Crear un vector de 10 elementos en donde se almacene en un tipo de dato lógico (TRUE \| FALSE) el estado de si una persona está feliz o no está feliz .
+
+```{r}
+feliz <- c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE)
+
+```
+
+Crear un vector de 10 elementos de tipo real para conocer la estatura de una persona
+
+```{r}
+estaturas <- c(1.65, 1.70, 1.54, 1.72, 1.70, 1.80, 1.90, 1.75, 1.72, 1.65)
+
+```
+
+Crear un vector de 10 elementos para saber el peso e en kgs. de una persona
+
+```{r}
+pesos <- c(80, 70, 75, 60, 65, 70, 86, 90, 50, 76)
+
+```
+
+Crear un vector de 10 elementos para identificar la zona geográfica den donde vive una persona de entre (CENTRO, SUR, NORTE,ORIENTE,PONIENTE)
+
+```{r}
+zonas <- c("CENTRO", "SUR", "SUR", "CENTRO", "ORIENTE", "PONIENTE", "CENTRO", "SUR", "PONIENTE", "CENTRO")
+
+```
+
+### Data.frame datos
+
+Construir un data frame llamado datos partir de los vectores
+
+```{r}
+datos <- data.frame(nombres, edades, generos, feliz, estaturas, pesos, zonas )
+datos
+
+```
+
+#### nrow() y length()
+
+Determinar el número de observaciones con *nrow()* y *length()*
+
+*nrow* cuenta el numero de registros u observaciones de un data.frame.
+
+*length*() cuenta los elementos de un vector.
+
+```{r}
+nrow(datos)
+length(edades)
+
+```
+
+#### which() which.max() which.min(), subset()
+
+*which*() evalúa la expresión de objeto (vector) y determina el resultado con la posición de los elementos que cumplan con la condición de la expresión
+
+```{r}
+which(edades > 25)
+
+```
+
+Conocer las edades que son por encima de 25
+
+```{r}
+edades[which(edades > 25)]
+```
+
+Identificar los nombres de las personas que tienen edad mayor a 25
+
+```{r}
+datos$nombres[which(datos$edades > 25)]
+```
+
+#### which.max() which.min()
+
+Accediendo a valores de columnas y renglones
+
+```{r}
+datos[1,] # Renglon, Columna
+datos[,1:2] # Renglon, Columna
+datos[2:4,1]
+datos[2:4,c(1,4,6)]
+
+datos$nombres
+
+datos$edades[4:3]
+
+```
+
+Devuelve la posición de los valores máximos y mínimos de un vector
+
+```{r}
+edades[which.max(edades)]
+edades[which.min(edades)]
+
+datos[which.max(datos$edades), ]
+
+```
+
+### subset()
+
+Filtrar de un data frame un subconjunto de registros a partir de una expresión
+
+Registros con edades mayores a 30
+
+```{r}
+mayores30 <- subset(datos, edades >30)
+mayores30
+
+```
+
+Registros con edades entre 30 y 40. Mayor que 30 y menor o igual que 40.
+
+```{r}
+subset(datos, edades >30 & edades <=40)
+
+```
+
+#### names(), colnames(), rownames()
+
+*names*() identifica o permite poner o modificar los nombres de columnas de un data frame.
+
+*colnames()* hace los mismos que names()
+
+*rownames*() identifica o poner los nobres de registros.
+
+Reconocer las funciomnes names() colnames() rownames()
+
+```{r}
+names(datos)
+names(datos)[3]
+
+colnames(datos)[4] <- c("felices")
+
+names(datos)
+
+```
+
+### Interpretar el desafio
+
+-   ¿Cuáles y cuántos son del género femenino y del género masculino?
+
+-   ¿Cuáles y cuántas personas están entre 20 y 25 años?
+
+-   ¿Cuáles y cuántas personas viven en zona CENTRO ?
+
+-   ¿Cuál es el valor medio y la dispersión de la variable edad de las personas?
+
+-   ¿Cuál es el valor medio y la dispersión de la variable altura de las personas?
+
+-   ¿Cuál es el valor medio y la dispersión de la variable peso de las personas?

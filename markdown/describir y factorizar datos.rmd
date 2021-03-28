@@ -1,0 +1,73 @@
+---
+title: "Describir y facrorizar datos"
+author: "Rubén Pizarro"
+date: "20/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+
+---
+
+# Describir y factorizar datos
+
+El ejercicio carga datos de personas y factoriza para con ello determinar frecuencias de algunas columnas del tipo cualitativas.
+
+Factorizar signifca que algunas variables que son de tipo *char* o *string* (cualitativas o categóricas) deben de categorizarse o factorizar, es decir deben formar parte de un conjunto de etiquetas y solamente de ese tipo de valor.
+
+La factorización sirve para determinar la frecuencia de ocasión de una variable categórica
+
+## Cargar librería
+
+```{r}
+library(readr)
+```
+
+## Cargar los datos
+
+```{r}
+datos.personas <- read.csv("https://raw.githubusercontent.com/rpizarrog/FundamentosMachineLearning/master/datos/personas.2.csv", encoding = "iso-8859-1")
+datos.personas
+
+```
+
+### summary()
+
+La función summary() visualiza los estadísticos básicos y describe de manera general los datos
+
+```{r}
+summary(datos.personas)
+
+```
+
+### factor()
+
+Factorizar nombres con la función *factor*()
+
+```{r}
+datos.personas$nombres <- factor(datos.personas$nombres)
+
+```
+
+Factorizar generos de las personas
+
+```{r}
+datos.personas$generos <- factor(datos.personas$generos)
+
+```
+
+Factorizar o categorizar la zona en donde viven las personas.
+
+```{r}
+datos.personas$zonas <- factor(datos.personas$zonas)
+
+```
+
+Describir nuevamente los datos de personas
+
+```{r}
+summary(datos.personas)
+```

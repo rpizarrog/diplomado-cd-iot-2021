@@ -1,0 +1,144 @@
+---
+title: "simulacion de datos"
+author: "Rubén Pizarro"
+date: "26/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+---
+
+# rep()
+
+Esta función *rep()* genere una repetición datos
+
+```{r}
+rep("hola", 3)
+rep(c(2,3,4), 4)
+
+repeticiones <- rep(c(5,6,7,6,8), 10)
+repeticiones
+
+n <- length(repeticiones)
+n
+
+```
+
+# seq()
+
+Esta función *seq()* genera una secuencia de datos
+
+```{r}
+seq(2, 100, 5)
+
+secuencia <- seq(18, 60, 3)
+secuencia
+
+```
+
+Construir unos datos partir de repeticiones y secuencia
+
+```{r}
+datos <- c(repeticiones, secuencia)
+datos <- unique(datos)
+datos
+
+```
+
+# sample()
+
+sample() es una función que permite sacar muestras de una población.
+
+```{r}
+set.seed(2021)  # Semilla
+
+
+m1 <- sample(x = datos, size = 10, replace = FALSE)
+m1
+
+m2 <- sample(x = datos, size = 10, replace = TRUE)
+m2
+
+m3 <- sample(datos, 10)
+m3
+
+m4 <- sample(datos, 10)
+m4
+
+m5 <- sample(datos, 10)
+m5
+
+
+
+mean(m1)
+mean(m2)
+mean(m3)
+mean(m5)
+mean(m5)
+```
+
+La media de los datos comprado con a media de todas las medias
+
+```{r}
+media.pob <- mean(datos)
+
+media.muestras <- mean(c(mean(m1), mean(m2), mean(m3), mean(m4), mean(m5)))
+
+
+media.pob
+media.muestras
+```
+
+# rnorm()
+
+Genera número aleatorios bajo una distribución normal
+
+```{r}
+numeros <- rnorm(n = 350, mean = 20, sd = 0.05)
+numeros
+
+```
+
+Generando histograma de los números
+
+```{r}
+hist(numeros)
+density(numeros)
+
+```
+
+# Probabilidades
+
+```{r}
+nombres <- c("Juan", "Carlos", "Lucy", "Luis", "Arnoldo")
+
+personas <- sample(x = nombres, size = 100, replace = TRUE)
+
+personas
+
+```
+
+¿Cuál es el nombre se repite
+
+```{r}
+table(personas)
+```
+
+## Jugando al dado
+
+```{r}
+dado <- c(1,2,3,4,6)
+# tirar.dado <- sample(x = dado, 1, prob = c(0.10, 0.10, 0.20, .05, 0.30, 0.25))
+# tirar.dado
+
+```
+
+## Jugando al dado tramposo
+
+```{r}
+
+
+```

@@ -1,0 +1,76 @@
+---
+title: "Analisis de Sentimientos"
+author: "Rubén Pizarro"
+date: "24/3/2021"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 5
+    code_folding: hide
+    toc_float: yes
+    number_sections: yes
+bibliography: references.bib
+---
+
+# Objetivo
+
+Realizar análisis de sentimiento de texto no estructurado mediante la librería *sentimentr*.
+
+# Descripción
+
+Instalar cargar y utilizar funciones de la librería *sentimentr* para realizar análisis de sentimientos de un conjunto de datos no estructurado.
+
+El desarrollo del caso es un ejemplo extraído del artículo de Futch (2018) titulado "*Doing your first sentiment analysis in R with Sentimentr*".[@fuchs_doing_2018]
+
+# Desarrollo
+
+## Cargar librerías
+
+### *sentimentr*
+
+Esta librería sirve evaluar y calcular la polaridad de un sentimiento a nivel de oración y de texto no estructurado.
+
+Se carga la librería previa instalación de la misma *install.packages("sentimentr")*
+
+```{r message=FALSE, warning=FALSE}
+#install.packages("sentimentr")
+library(sentimentr)
+
+```
+
+### *ndjson*
+
+Esta librería contiene diversos archivos en formato *JSON*. Los archivos *JSON* (JavaScript Object Notation) son un tipo de formato de datos semiestructurados con soporte en muchos lenguajes de programación principalmente usado para intercambio entre aplicaciones y plataformas. [@jsonorg_introducing_nodate].
+
+Se carga la librería previamente instalada *install.packages("ndjson")*
+
+```{r message=FALSE, warning=FALSE}
+
+library(ndjson)
+```
+
+## Identificar los datos 
+
+El conjunto de datos fue descargado estará almacenado en repositorio local y fueron descargados del sitio de trabajo [Amazon product data](http://jmcauley.ucsd.edu/data/amazon/ "Amazon product data").
+
+```{r}
+source()
+
+```
+
+## Cargar los datos
+
+Se cargan los datos con la función *stream_in()* en una variable llamada datos, esta funci´pn por dafault deja el resultado en un *data.frame.*
+
+, la función class() identifica el tipo de datos a tratar, la función str() identifica su estructura y finalmente la función head() visuliza las primeras oraciones.
+
+```{r}
+datos = stream_in("AmazonBeauty.json")
+#class(datos)
+#str(datos)
+# head(datos)
+```
+
+[Aqui vamos]{style="background: #CCC;"}
+
+# Referencias bibliográficas
