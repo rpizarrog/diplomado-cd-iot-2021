@@ -108,3 +108,11 @@ paste ("Las variables independientes del modelo si son estad´siticamente signif
        "que sus coefientes son diferentes de cero")
 paste("El valor de Coeficiente de Determinación ajustado es Adjusted R-squared:  0.5551 ",
       55.03,"%", "Es que tanto impactan o representan las variables al promedio ")
+
+
+
+
+
+# OTRO EJERCICIO
+
+"https://rpubs.com/Joaquin_AR/226291"
